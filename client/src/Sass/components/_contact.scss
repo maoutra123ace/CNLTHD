@@ -1,0 +1,115 @@
+.contact-container {
+    margin: 5rem auto;
+    padding: 0m 10rem;
+    @include flex(center, space-between);
+    box-shadow: $box-shadow;
+
+    @include mobile {
+        @include flex(center, center);
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    &__body {
+        width: 100%;
+        height: 40rem;
+
+        img {
+            width: 100%;
+            @include flex(center, center);
+        }
+
+        @include mobile {
+            position: relative;
+            bottom: 5rem;
+        }
+
+    }
+
+    &__body ::after {
+        background: rgba(0, 0, 0, 0.2);
+
+    }
+
+    .form-container {
+        width: 50%;
+        padding: 2rem;
+
+        @include mobile {
+            width: 80%;
+
+            position: relative;
+            bottom: 5rem;
+        }
+
+        .main-form {
+
+
+
+            label {
+                color: grey;
+                font-size: 1.1rem;
+
+            }
+
+            ::placeholder {
+                color: #cccccc;
+                font-size: 1rem;
+                font-family: 'Noto Sans', sans-serif;
+            }
+
+            textarea {
+                border: none;
+                border-bottom: 0.1rem solid #e6e6e6;
+                width: 90%;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+                resize: none;
+                outline: none;
+                font-family: 'Noto Sans', sans-serif;
+            }
+
+            #submit {
+                height: 3.2rem;
+                width: 14rem;
+                font-size: 1.2rem;
+                border-radius: 2rem;
+                background: linear-gradient(to right, #cc3399, #ff5050);
+                margin-left: 25%;
+                color: white;
+                margin-top: 1.2rem;
+            }
+
+            .form-element {
+                margin-top: 0.5rem;
+            }
+
+            .contact {
+                color: white;
+                background: #00cc00;
+                width: 14rem;
+                padding-left: 1rem;
+                border-radius: 2rem;
+                margin-left: 33%;
+                margin-top: 25%;
+                border: none;
+                outline: none;
+                font-size: 1.5em;
+            }
+
+        }
+
+        input {
+            border: none;
+            border-bottom: 0.1rem solid #e6e6e6;
+            width: 90%;
+            font-size: 1.2rem;
+            padding: 0.7rem 0;
+            outline: none;
+
+        }
+    }
+}

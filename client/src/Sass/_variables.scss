@@ -1,0 +1,33 @@
+$main-bg:#fff;
+$main-color:#4267b2;
+$main-content:#cccccc;
+$txt-main-color:#333333;
+$txt-second-color:#8d8d8d;
+$txt-white:#fff;
+
+
+$btn-bg-color:$main-bg;
+$btn-main-color:#fff;
+
+$header-height:150px;
+$header-tablet-color:70px;
+$header-mobile-height:40px;
+$header-tablet-height:70px;
+$header-shrink-height:130px;
+$box-shadow:rgba(149,157,165,0.2) 0px 8px 24px;
+$colors:(
+    "blue":#4267b2,
+    "orange":#e79c41,
+    "gray":#e9edf2,
+    "white":$txt-white,
+    "main":$main-color
+);
+$max-mobile-width: 770px;
+$min-mobile-width:390px;
+$max-tablet-width: 1024px;
+$min-tablet-width:768px;
+$max-Desktop-width:1536px;
+$min-Desktop-width:1025px;
+$min-between-width:1028px;
+$max-between-width:1410px;
+$numbers:(0,1,2,3,4,5,6,7,8,9)

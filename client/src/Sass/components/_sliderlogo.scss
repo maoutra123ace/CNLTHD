@@ -1,0 +1,17 @@
+.image_container{
+    img{
+        padding: 2rem;
+        height:150px;
+        width:100%;
+        object-fit: cover;
+        cursor: pointer;
+        @include mobile{
+            height: 300px;
+        }
+    }
+    img:hover{
+        background-color: #ecf0f4;
+        border-radius: 1rem ;
+        transition: 0.3s all;
+    }
+}

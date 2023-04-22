@@ -1,0 +1,24 @@
+@mixin flex($align-item,$justify-content ){
+    display: flex !important;
+    justify-content: $justify-content;
+    align-items:$align-item ;
+}
+@mixin flex-direction($flex-direction,$flex-wrap) {
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}
+@mixin tablet{
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width){
+        @content;
+    }
+}
+@mixin mobile{
+    @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width){
+        @content;
+    }
+}
+@mixin Desktopbetween{
+    @media(min-width: $min-between-width) and (max-width: $max-between-width){
+        @content;
+    }
+}

@@ -1,0 +1,187 @@
+.header {
+    background-color: $main-bg;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: $header-height;
+    transition: height 0.3s ease;
+
+    @include tablet {
+        height: $header-tablet-height;
+
+    }
+
+    @include mobile {
+        top: 0;
+        height: $header-tablet-height;
+    }
+
+
+    &.shrink-flex {
+        height: $header-shrink-height;
+        box-shadow: $box-shadow;
+        z-index: 100;
+        top: 0;
+        position: fixed;
+
+    }
+
+    &__menu {
+        @include flex(center, space-between);
+        font-size: 1.2rem;
+
+
+        &__mobile-toggle {
+            display: none;
+        }
+
+        &__item~&__item {
+            margin-left: 39px;
+
+            @include tablet {
+                margin-left: 20px;
+            }
+
+            @include mobile {
+                margin-left: 10px;
+            }
+        }
+
+        &__item.active {
+            font-weight: 600;
+            color: $main-color;
+        }
+
+        &__item:hover {
+            color: $main-color;
+        }
+
+        &__left,
+        &__right {
+            @include flex(center, center);
+            height: 100%;
+
+            &__item {
+                @include flex(center, center);
+            }
+
+            @include tablet {
+                margin-left: auto;
+            }
+
+            @include mobile {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__right {
+            font-size: 2em;
+            margin-left: 1rem;
+
+            &__item {
+                @include flex(center, center);
+            }
+
+            @include tablet {
+                margin-left: 10px;
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__left {
+            margin: auto;
+
+            &__close {
+                display: none;
+            }
+
+            @include tablet {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 30%;
+                justify-content: flex-start;
+                height: 100em;
+                z-index: 2;
+                padding-top: 30px;
+                background-color: $main-bg;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+
+                &.active {
+                    transform: translate(0);
+                }
+
+
+                &__item~&__item {
+                    margin-left: unset;
+                    margin-top: 30px;
+                }
+
+                &__close {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.5em;
+                }
+            }
+
+            @include mobile {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 30%;
+                justify-content: flex-start;
+                height: 100em;
+                z-index: 2;
+                padding-top: 30px;
+                background-color: $main-bg;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+
+                &.active {
+                    transform: translate(0);
+                }
+
+
+                &__item~&__item {
+                    margin-left: unset;
+                    margin-top: 30px;
+                }
+
+                &__close {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.5em;
+                }
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+        &__mobile-toggle {
+            display: none;
+
+            @include mobile {
+                display: block;
+            }
+
+            @include tablet {
+                display: block;
+                font-size: 1.5rem;
+
+            }
+        }
+
+    }
+
+}
